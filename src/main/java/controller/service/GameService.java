@@ -46,6 +46,9 @@ public class GameService {
             u.addWins();
             System.out.println(u);
         }
+        winners.forEach((User u) -> u.addWins());
+        winners.forEach(System.out::println);
+
         System.out.println("Winners combination " + PokerCombination.getMaxCombination(winners.get(0).getHand()));
     }
 
