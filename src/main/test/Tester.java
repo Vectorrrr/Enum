@@ -1,6 +1,4 @@
-import controller.service.GameService;
 import controller.service.PokerService;
-import junit.framework.Assert;
 import model.*;
 import org.junit.Test;
 
@@ -16,7 +14,7 @@ import static junit.framework.TestCase.assertEquals;
 public class Tester {
 
     @Test
-    public void testEqualseCombinationTest1(){
+    public void testEqualsCombinationTest1(){
         Hand h1=new Hand(5);
         Hand h2=new Hand(5);
 
@@ -34,7 +32,7 @@ public class Tester {
         assertEquals(0, PokerCombination.compareHand(h1,h2));
     }
     @Test
-    public void testEqualseCombinationTest2(){
+    public void testEqualsCombinationTest2(){
         Hand h1=new Hand(5);
         Hand h2=new Hand(5);
 
@@ -52,7 +50,7 @@ public class Tester {
         assertEquals(0, PokerCombination.compareHand(h1,h2));
     }
     @Test
-    public void testEqualseCombinationTest3(){
+    public void testEqualsCombinationTest3(){
         Hand h1=new Hand(5);
         Hand h2=new Hand(5);
 
@@ -70,7 +68,7 @@ public class Tester {
         assertEquals(0, PokerCombination.compareHand(h1,h2));
     }
     @Test
-    public void testEqualseCombinationTest4(){
+    public void testEqualsCombinationTest4(){
         Hand h1=new Hand(5);
         Hand h2=new Hand(5);
 
@@ -88,7 +86,7 @@ public class Tester {
         assertEquals(0, PokerCombination.compareHand(h1,h2));
     }
     @Test
-    public void testEqualseCombinationTest5(){
+    public void testEqualsCombinationTest5(){
         Hand h1=new Hand(5);
         Hand h2=new Hand(5);
 

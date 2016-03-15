@@ -21,13 +21,9 @@ public enum Value {
     QUEEN("Queen", 10,12),
     KING("King", 10,13);
 
-    private int sequenceNumber;
-    private int points;
-    private String sing;
-
-    public int getPoints() {
-        return points;
-    }
+    private final int sequenceNumber;
+    private final int points;
+    private final String sing;
 
     public int getSequenceNumber() {
         return sequenceNumber;

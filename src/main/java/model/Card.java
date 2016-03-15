@@ -8,8 +8,8 @@ package model;
  * contains two field suit and value
  * */
 public class Card implements Comparable<Card> {
-    private Suit suit;
-    private Value value;
+    private final Suit suit;
+    private final Value value;
 
 
     public Card(Suit suitCards, Value valueCards) {

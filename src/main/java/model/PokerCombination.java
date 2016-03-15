@@ -2,6 +2,7 @@ package model;
 
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by CraZy_IVAN on 10.03.16.
@@ -22,8 +23,8 @@ public enum PokerCombination {
     FOUR_OF_A_KIND("Four of a kind", 700) ,
     STRAIGHT_FLUSH("Straight Flush", 800) {};
 
-    private int point;
-    private String name;
+    private final int  point;
+    private final String name;
 
 
     PokerCombination(String name, int point) {
@@ -35,12 +36,10 @@ public enum PokerCombination {
         return point;
     }
 
-    public String getName() {
-        return name;
-    }
+
 
     /**
-     * @author
+     * @author Vanya Hladush
      * Method return the High combinate that consist Hand
      * this method have next algorithm
      * the first part we calc mutually equal value cards
@@ -86,11 +85,8 @@ public enum PokerCombination {
            }
        }
 
-       List<Integer> values=new ArrayList<>();
-       for(Card c:cards){
-            values.add(c.getValue().getSequenceNumber());
-       }
-       Collections.sort(values);
+       List<Integer> values= cards.stream().map(c -> c.getValue().getSequenceNumber()).collect(Collectors.toList());
+        Collections.sort(values);
 
         for(int i=1;i<values.size();++i){
             if(values.get(i)-values.get(i-1)>1){

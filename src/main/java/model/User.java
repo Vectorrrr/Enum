@@ -7,7 +7,7 @@ package model;
  * Class simulates player in poker game
  * */
 public class User {
-    private String name;
+    private final String name;
     private Hand hand;
     private int wins;
 
@@ -15,13 +15,6 @@ public class User {
     public User(String name) {
         this.name = name;
     }
-
-    public User(String name, int wins) {
-        this(name);
-        this.wins = wins;
-    }
-
-
 
     @Override
     public String toString() {

@@ -9,7 +9,7 @@ package model;
 public enum Suit {
     Diamonds("Diamonds"), Clubs("Clubs"), Spades("Spades"), Hearts("Hearts");
 
-    private String suit;
+    private final String suit;
 
     Suit(String suit) {
         this.suit = suit;

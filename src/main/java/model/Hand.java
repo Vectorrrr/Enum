@@ -11,7 +11,7 @@ import java.util.*;
  * */
 public class Hand {
     private final String FULL_HAND_EXCEPTION="You want add card but the hand is full";
-    private List<Card> cards = new ArrayList();
+    private List<Card> cards = new ArrayList<>();
     private int maxSizeHand;
 
 

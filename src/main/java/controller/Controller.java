@@ -9,8 +9,8 @@ import java.util.Scanner;
  */
 
 public class Controller {
-    private Scanner sc = new Scanner(System.in);
-    private GameService gameService = new GameService();
+    private final Scanner sc = new Scanner(System.in);
+    private final GameService gameService = new GameService();
 
     public void run() {
         String userAnswer;

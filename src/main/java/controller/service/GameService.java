@@ -18,7 +18,7 @@ import java.util.Scanner;
 public class GameService {
     private final static String EXIST_FREE_PLACE = "I can't add user because all place occupied";
     private final static String SEPARATOR_ROUNDS = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-    private Scanner sc = new Scanner(System.in);
+    private final Scanner sc = new Scanner(System.in);
 
     private List<User> users = new ArrayList<>();
     private int round = 1;
