@@ -1,7 +1,6 @@
 import controller.Controller;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static java.lang.Thread.yield;
 
@@ -10,7 +9,7 @@ import static java.lang.Thread.yield;
  */
 public class Main {
     public  static void main(String[] args){
-      Controller.run();
-    }
+       new Controller().run();
+   }
 }
 

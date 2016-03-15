@@ -1,2 +1,3 @@
 /EnumSecond.iml
-/.idea
+*.idea
+/target

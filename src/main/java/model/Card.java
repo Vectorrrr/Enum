@@ -3,14 +3,18 @@ package model;
 /**
  * Created by CraZy_IVAN on 10.03.16.
  */
-public class Card {
-    private SuitCards suitCards;
-    private ValueCards valueCards;
+/**
+ * Class Card modeling card for poker
+ * contains two field suit and value
+ * */
+public class Card implements Comparable<Card> {
+    private Suit suit;
+    private Value value;
 
 
-    public Card(SuitCards suitCards, ValueCards valueCards) {
-        this.suitCards = suitCards;
-        this.valueCards = valueCards;
+    public Card(Suit suitCards, Value valueCards) {
+        this.suit = suitCards;
+        this.value = valueCards;
     }
 
     @Override
@@ -19,20 +23,36 @@ public class Card {
             return false;
         }
         Card c = (Card) o;
-        return c.getSuitCards().equals(this.suitCards) &&
-                c.getValueCards().equals(this.valueCards);
+        return c.getSuit().equals(this.suit) &&
+                c.getValue().equals(this.value);
     }
 
     @Override
     public String toString() {
-        return suitCards.toString() + " " + valueCards.toString();
+        return suit.toString() + " " + value.toString();
     }
 
-    public SuitCards getSuitCards() {
-        return suitCards;
+    @Override
+    public int compareTo(Card card) {
+        int cardNumber=card.getValue().getSequenceNumber();
+        int thisNumber=this.getValue().getSequenceNumber();
+
+        if(cardNumber>thisNumber){
+            return 1;
+        }else if(cardNumber<thisNumber){
+            return -1;
+        }else {
+            return 0;
+        }
+
     }
 
-    public ValueCards getValueCards() {
-        return valueCards;
+    public Suit getSuit() {
+        return suit;
     }
+
+    public Value getValue() {
+        return value;
+    }
+
 }

@@ -7,6 +7,7 @@ import java.util.Scanner;
 /**
  * Created by CraZy_IVAN on 12.03.16.
  */
+
 public class Controller {
     private Scanner sc = new Scanner(System.in);
     private GameService gameService = new GameService();

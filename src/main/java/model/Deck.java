@@ -6,11 +6,12 @@ import java.util.*;
  * Created by CraZy_IVAN on 10.03.16.
  */
 public class Deck {
-    private ArrayList<Card> deck = new ArrayList<Card>();
+    private static final String EXCEPTION_EMPTY_DECK="You want take card but deck is empty";
+    private ArrayList<Card> deck = new ArrayList<>();
 
     public Deck() {
-        for (SuitCards suitCards : SuitCards.values()) {
-            for (ValueCards valueCards : ValueCards.values()) {
+        for (Suit suitCards : Suit.values()) {
+            for (Value valueCards : Value.values()) {
                 deck.add(new Card(suitCards, valueCards));
             }
         }
@@ -24,7 +25,7 @@ public class Deck {
             deck.remove(indLast);
             return c;
         }
-        throw new IllegalArgumentException();
+        throw new IllegalStateException(EXCEPTION_EMPTY_DECK);
 
     }
 }

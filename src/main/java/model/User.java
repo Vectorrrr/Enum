@@ -3,10 +3,12 @@ package model;
 /**
  * Created by CraZy_IVAN on 12.03.16.
  */
+/**
+ * Class simulates player in poker game
+ * */
 public class User {
     private String name;
     private Hand hand;
-    private int userId;
     private int wins;
 
 
@@ -19,21 +21,19 @@ public class User {
         this.wins = wins;
     }
 
-    public User(String name, int wins, Hand hand) {
-        this(name, wins);
-        this.hand = hand;
-    }
 
-    public void addWins() {
-        wins++;
+
+    @Override
+    public String toString() {
+        return "Name:\t" + name + "   wins\t" + wins + " " + hand.toString();
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void addWins() {
+        wins++;
     }
 
     public Hand getHand() {
@@ -44,8 +44,4 @@ public class User {
         this.hand = hand;
     }
 
-    @Override
-    public String toString() {
-        return "Name:\t" + name + "   wins\t" + wins + " " + hand.toString();
-    }
 }
